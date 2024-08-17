@@ -47,15 +47,15 @@ export default function UpdateRosterForm({ roster }: { roster: Roster }) {
       ...roster,
       offPosition:
         roster.type === RosterType.Athlete
-          ? roster.offPosition ?? undefined
+          ? (roster.offPosition ?? undefined)
           : undefined,
       defPosition:
         roster.type === RosterType.Athlete
-          ? roster.defPosition ?? undefined
+          ? (roster.defPosition ?? undefined)
           : undefined,
       splPosition:
         roster.type === RosterType.Athlete
-          ? roster.splPosition ?? undefined
+          ? (roster.splPosition ?? undefined)
           : undefined
     }
   })
