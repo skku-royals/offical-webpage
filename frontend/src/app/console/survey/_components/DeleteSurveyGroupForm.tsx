@@ -69,6 +69,7 @@ export default function DeleteSurveyGroupForm({
       toast.success('출석조사를 삭제했습니다')
       router.refresh()
     } catch (error) {
+      console.log(error)
       toast.error('출석조사를 삭제하지 못했습니다')
     } finally {
       setIsFetching(false)

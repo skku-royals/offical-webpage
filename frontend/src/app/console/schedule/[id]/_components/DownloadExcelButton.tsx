@@ -38,6 +38,7 @@ export default function DownloadExcelButton({
       link.click()
       link.remove()
     } catch (error) {
+      console.log(error)
       toast.error('다운로드 실패')
     } finally {
       setIsFecthing(false)

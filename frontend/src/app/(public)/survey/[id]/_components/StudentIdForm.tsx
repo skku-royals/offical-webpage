@@ -37,6 +37,7 @@ export default function StudentIdForm() {
       await fetcher.get(`/rosters/studentId/${data.studentId}`, false)
       router.push(`?studentId=${data.studentId}`)
     } catch (error) {
+      console.log(error)
       toast.error('학번을 확인해주세요')
     } finally {
       setIsFetching(false)

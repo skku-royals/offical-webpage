@@ -47,6 +47,7 @@ export default function LoginForm() {
         toast.error('로그인 실패')
       }
     } catch (error) {
+      console.log(error)
       toast.error('로그인 실패')
     } finally {
       setIsFetching(false)

@@ -170,6 +170,7 @@ export default function CreateSurveyForm() {
       toast.success('출석조사가 생성되었습니다')
       router.push('/console/survey?revalidate=true')
     } catch (error) {
+      console.log(error)
       toast.error('출석조사를 생성하지 못했습니다')
     } finally {
       setIsFetching(false)

@@ -82,6 +82,7 @@ export default function UpdateAttendanceForm({
       toast.success('출결정보가 업데이트 되었습니다')
       router.refresh()
     } catch (error) {
+      console.log(error)
       toast.error('출결정보를 업데이트하지 못했습니다')
     } finally {
       setIsFetching(false)

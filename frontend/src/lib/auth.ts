@@ -107,6 +107,7 @@ export const authOptions: NextAuthOptions = {
             ...getAuthToken(reissueRes)
           }
         } catch (error) {
+          console.log(error)
           return {
             ...token,
             error: 'RefreshAccessTokenError'

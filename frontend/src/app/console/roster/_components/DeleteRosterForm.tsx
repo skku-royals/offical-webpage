@@ -70,6 +70,7 @@ export default function DeleteRosterForm({
       toast.success(`부원 ${roster.name}을 삭제했습니다`)
       router.refresh()
     } catch (error) {
+      console.log(error)
       toast.error('부원을 삭제하지 못했습니다')
     } finally {
       setIsFetching(false)

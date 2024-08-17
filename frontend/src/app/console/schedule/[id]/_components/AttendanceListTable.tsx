@@ -37,8 +37,11 @@ export default function AttendanceListTable({
     const positions = []
     switch (roster.type) {
       case RosterType.Athlete:
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
         roster.offPosition ? positions.push(roster.offPosition) : null
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
         roster.defPosition ? positions.push(roster.defPosition) : null
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
         roster.splPosition ? positions.push(roster.splPosition) : null
         return <p className="text-nowrap">{positions.join('/')}</p>
       default:

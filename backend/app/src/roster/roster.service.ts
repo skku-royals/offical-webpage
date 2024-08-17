@@ -214,6 +214,7 @@ export class RosterService {
     try {
       return RosterStatus[status]
     } catch (error) {
+      console.log(error)
       throw new ParameterValidationException('status')
     }
   }

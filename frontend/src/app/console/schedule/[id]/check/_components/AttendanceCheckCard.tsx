@@ -27,6 +27,7 @@ export default function AttendanceCheckCard({
       toast.success('출석체크 성공')
       router.push(pathname)
     } catch (error) {
+      console.log(error)
       toast.error('출석체크 실패')
     } finally {
       setIsFetching(false)

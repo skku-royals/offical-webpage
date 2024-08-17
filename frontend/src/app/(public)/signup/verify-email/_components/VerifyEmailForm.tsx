@@ -44,6 +44,7 @@ export default function VerifyEmailForm({ email }: { email: string }) {
       router.push('/login')
       toast.success('회원가입이 완료되었습니다')
     } catch (error) {
+      console.log(error)
       toast.error('인증코드가 일치하지 않습니다')
     } finally {
       setIsFetching(false)

@@ -704,6 +704,7 @@ export class AttendanceService {
     try {
       return AttendanceResponse[response]
     } catch (error) {
+      console.log(error)
       return AttendanceResponse.Present
     }
   }
@@ -712,6 +713,7 @@ export class AttendanceService {
     try {
       return RosterType[rosterType]
     } catch (error) {
+      console.log(error)
       return RosterType.Athlete
     }
   }

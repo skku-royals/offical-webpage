@@ -64,6 +64,7 @@ export default function CreateRosterForm() {
       router.refresh()
       toast.success('부원을 등록했습니다')
     } catch (error) {
+      console.log(error)
       toast.error('부원을 등록하지 못했습니다')
     } finally {
       setIsFetching(false)

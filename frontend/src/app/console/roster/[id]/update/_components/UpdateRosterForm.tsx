@@ -88,6 +88,7 @@ export default function UpdateRosterForm({ roster }: { roster: Roster }) {
       router.refresh()
       toast.success('부원정보가 업데이트 되었습니다')
     } catch (error) {
+      console.log(error)
       toast.error('부원을 업데이트하지 못했습니다')
     } finally {
       setIsFetching(false)

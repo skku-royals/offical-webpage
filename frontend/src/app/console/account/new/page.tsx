@@ -41,6 +41,7 @@ export default function CreateTempUserPage() {
       router.push('/console/account')
       router.refresh()
     } catch (error) {
+      console.log(error)
       toast.error('생성 실패')
     } finally {
       setIsFetching(false)

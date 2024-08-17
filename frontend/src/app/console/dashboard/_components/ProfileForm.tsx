@@ -64,6 +64,7 @@ export function ProfileForm({ profile }: { profile: UserProfile }) {
       toast.success('프로필 정보가 업데이트 되었습니다')
       router.refresh()
     } catch (error) {
+      console.log(error)
       toast.error('프로필 정보 업데이트 실패')
     }
   }

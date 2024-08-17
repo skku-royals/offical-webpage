@@ -74,6 +74,7 @@ export default function AttendanceCheckForm({
       toast.success('출석체크 성공')
       router.refresh()
     } catch (error) {
+      console.log(error)
       toast.error('출결 정보를 업데이트하지 못했습니다')
     } finally {
       setIsFetching(false)

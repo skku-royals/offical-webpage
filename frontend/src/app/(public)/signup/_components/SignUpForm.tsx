@@ -40,6 +40,7 @@ export default function SignUpForm() {
       await fetcher.post(`/user`, data, false)
       router.push(`/signup/verify-email?email=${data.email}`)
     } catch (error) {
+      console.log(error)
       toast.error('회원가입 실패')
     } finally {
       setIsFetching(false)

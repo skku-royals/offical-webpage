@@ -112,6 +112,7 @@ export default function UpdateSurveyGroupForm({
       toast.success('출석조사 정보가 변경되었습니다')
       router.refresh()
     } catch (error) {
+      console.log(error)
       toast.error('출석조사 정보를 변경하지 못했습니다')
     } finally {
       setIsFetching(false)
