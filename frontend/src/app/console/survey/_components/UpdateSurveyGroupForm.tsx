@@ -179,7 +179,7 @@ export default function UpdateSurveyGroupForm({
                               mode="single"
                               selected={field.value}
                               onSelect={field.onChange}
-                              initialFocus
+                              autoFocus
                             />
                           </PopoverContent>
                         </Popover>
@@ -235,7 +235,7 @@ export default function UpdateSurveyGroupForm({
                               mode="single"
                               selected={field.value}
                               onSelect={field.onChange}
-                              initialFocus
+                              autoFocus
                             />
                           </PopoverContent>
                         </Popover>
