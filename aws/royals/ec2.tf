@@ -23,7 +23,7 @@ resource "aws_instance" "cache" {
   ami                         = "ami-0c28dbbd4ed200038"
   instance_type               = "t4g.micro"
   subnet_id                   = aws_subnet.private_2.id
-  key_name                    = "skku-royals-key-pair"
+  key_name                    = "royals-ecs-redis-keypair"
   vpc_security_group_ids      = [aws_security_group.ec2.id, data.aws_security_group.ssh-allow.id]
   associate_public_ip_address = true
 
