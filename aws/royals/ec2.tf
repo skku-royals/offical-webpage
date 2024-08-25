@@ -21,7 +21,7 @@ resource "aws_instance" "database" {
 
 resource "aws_instance" "cache" {
   ami                         = "ami-0c28dbbd4ed200038"
-  instance_type               = "t4g.small"
+  instance_type               = "t4g.micro"
   subnet_id                   = aws_subnet.private_2.id
   key_name                    = "skku-royals-key-pair"
   vpc_security_group_ids      = [aws_security_group.ec2.id, data.aws_security_group.ssh-allow.id]
