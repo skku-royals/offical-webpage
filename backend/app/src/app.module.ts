@@ -19,7 +19,6 @@ import { AttendanceModule } from './attendance/attendance.module'
 import { AuthModule } from './auth/auth.module'
 import { EmailModule } from './email/email.module'
 import { MailerConfigService } from './email/mailer-config.service'
-import { QuizModule } from './quiz/quiz.module'
 import { RosterModule } from './roster/roster.module'
 import { SurveyModule } from './survey/survey.module'
 import { UserModule } from './user/user.module'
@@ -43,8 +42,7 @@ import { UserModule } from './user/user.module'
     RosterModule,
     SurveyModule,
     AttendanceModule,
-    EmailModule,
-    QuizModule
+    EmailModule
   ],
   controllers: [AppController],
   providers: [
