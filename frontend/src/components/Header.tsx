@@ -13,7 +13,6 @@ import { ThemeToggle } from './ThemeToggle'
 const navigation = [
   { name: '로스터', href: '#' },
   { name: '일정/결과', href: '#' },
-  { name: '게시판', href: '#' },
   { name: '소개', href: '#' }
 ]
 
