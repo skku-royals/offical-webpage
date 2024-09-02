@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev -p 5173",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 5173",
     "lint": "next lint",
     "format:check": "prettier --check ."
   },
@@ -25,9 +25,8 @@
     "@radix-ui/react-tabs": "^1.1.0",
     "@tailwindcss/forms": "^0.5.8",
     "@tanstack/react-table": "^8.20.5",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.1",
     "embla-carousel-react": "^8.2.0",
+    "jwt-decode": "^4.0.0",
     "lucide-react": "^0.438.0",
     "moment": "^2.30.1",
     "next": "14.2.7",
@@ -37,9 +36,8 @@
     "react-day-picker": "^9.0.8",
     "react-dom": "18.3.1",
     "react-hook-form": "^7.53.0",
+    "sharp": "^0.33.5",
     "sonner": "^1.5.0",
-    "tailwind-merge": "^2.5.2",
-    "tailwindcss-animate": "^1.0.7",
     "use-debounce": "^10.0.3",
     "vaul": "^0.9.1",
     "zod": "^3.23.8"
@@ -49,10 +47,13 @@
     "@types/react": "18.3.5",
     "@types/react-dom": "18.3.0",
     "autoprefixer": "^10.4.20",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
     "eslint-config-next": "14.2.7",
     "postcss": "^8.4.43",
-    "storybook": "^7.6.20",
+    "tailwind-merge": "^2.5.2",
     "tailwindcss": "^3.4.10",
+    "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.5.4"
   }
 }

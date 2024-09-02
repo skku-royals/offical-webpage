@@ -16,7 +16,7 @@ import {
   PopoverTrigger
 } from '@/components/ui/popover'
 import { useDate } from '@/hooks/useDate'
-import { auth } from '@/lib/auth'
+import { auth } from '@/lib/auth/auth'
 import { FetchError } from '@/lib/error'
 import { cn } from '@/lib/utils'
 import { API_BASE_URL } from '@/lib/vars'

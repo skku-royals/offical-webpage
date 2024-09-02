@@ -11,20 +11,8 @@ import {
   DrawerHeader,
   DrawerTitle
 } from '@/components/ui/drawer'
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel
-} from '@/components/ui/form'
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue
-} from '@/components/ui/select'
+import { Form, FormField, FormItem, FormLabel } from '@/components/ui/form'
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { AttendanceLocation, AttendanceStatus } from '@/lib/enums'
 import fetcher from '@/lib/fetcher'
 import { AttendanceFormSchema } from '@/lib/forms'
@@ -141,37 +129,43 @@ export default function AttendanceCheckForm({
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>실제출석</FormLabel>
-                      <Select
-                        onValueChange={field.onChange}
+                      <Tabs
                         defaultValue={field.value}
+                        onValueChange={field.onChange}
                       >
-                        <FormControl>
-                          <SelectTrigger>
-                            <SelectValue />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value={AttendanceStatus.Present}>
+                        <TabsList>
+                          <TabsTrigger
+                            className="text-green-500"
+                            value={AttendanceStatus.Present}
+                          >
                             참석
-                          </SelectItem>
-                          <SelectItem value={AttendanceStatus.Tardy}>
+                          </TabsTrigger>
+                          <TabsTrigger
+                            className="text-amber-500"
+                            value={AttendanceStatus.Tardy}
+                          >
                             부분참석
-                          </SelectItem>
-                          <SelectItem value={AttendanceStatus.Absence}>
+                          </TabsTrigger>
+                          <TabsTrigger
+                            className="text-red-500"
+                            value={AttendanceStatus.Absence}
+                          >
                             불참
-                          </SelectItem>
-                        </SelectContent>
-                      </Select>
+                          </TabsTrigger>
+                        </TabsList>
+                      </Tabs>
                     </FormItem>
                   )}
                 />
               </div>
-              <DrawerFooter>
+              <DrawerFooter className="mt-3">
                 <Button type="submit" className="w-full" disabled={isFetching}>
                   체크하기
                 </Button>
                 <DrawerClose asChild>
-                  <Button variant="outline">취소</Button>
+                  <Button variant="outline" disabled={isFetching}>
+                    취소
+                  </Button>
                 </DrawerClose>
               </DrawerFooter>
             </form>
