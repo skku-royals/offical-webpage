@@ -8,7 +8,6 @@ const sessionCookieName = process.env.NEXTAUTH_URL?.startsWith('https://')
   : 'next-auth.session-token'
 
 export const middleware = async (req: NextRequest) => {
-  console.log('미들웨어 작동')
   const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET })
 
   if (req.nextUrl.pathname.startsWith('/console') && !token) {
