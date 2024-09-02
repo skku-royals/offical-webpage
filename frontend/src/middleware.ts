@@ -1,7 +1,6 @@
 import { encode, getToken } from 'next-auth/jwt'
 import { NextResponse, type NextRequest } from 'next/server'
-import { getParsedJWTToken } from './lib/auth'
-import { AccountStatus } from './lib/enums'
+import { getParsedJWTToken } from './lib/auth/token'
 import { API_BASE_URL } from './lib/vars'
 
 const sessionCookieName = process.env.NEXTAUTH_URL?.startsWith('https://')
@@ -9,16 +8,11 @@ const sessionCookieName = process.env.NEXTAUTH_URL?.startsWith('https://')
   : 'next-auth.session-token'
 
 export const middleware = async (req: NextRequest) => {
+  console.log('미들웨어 작동')
   const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET })
 
   if (req.nextUrl.pathname.startsWith('/console') && !token) {
     return NextResponse.redirect(new URL('/', req.url))
-  }
-
-  if (token && token.status !== AccountStatus.Enable) {
-    return NextResponse.redirect(
-      new URL(`/un-verified?status=${token?.status}`, req.url)
-    )
   }
 
   if (token && token.accessTokenExpires <= Date.now()) {

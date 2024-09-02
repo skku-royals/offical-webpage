@@ -1,7 +1,7 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-import { auth } from '@/lib/auth'
+import { auth } from '@/lib/auth/auth'
 import { API_BASE_URL } from '@/lib/vars'
 import { SheetIcon } from 'lucide-react'
 import { useState } from 'react'

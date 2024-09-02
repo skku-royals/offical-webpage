@@ -1,4 +1,4 @@
-import { auth } from '@/lib/auth'
+import { auth } from '@/lib/auth/auth'
 import { FetchError } from './error'
 import { HttpStatus } from './http-status'
 import { API_BASE_URL } from './vars'

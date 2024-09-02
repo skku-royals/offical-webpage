@@ -1,6 +1,6 @@
 'use client'
 
-import { auth } from '@/lib/auth'
+import { auth } from '@/lib/auth/auth'
 import fetcher from '@/lib/fetcher'
 import type { UserProfile } from '@/lib/types/user'
 import { Dialog, Transition } from '@headlessui/react'

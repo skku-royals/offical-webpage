@@ -5,45 +5,18 @@ export function NoticeSection() {
     <Section title="공지사항">
       <div className="leading-6 text-zinc-900 dark:text-zinc-100">
         <h2 className="font-bold sm:text-lg">업데이트 내용 안내</h2>
-        <p className="mt-2 text-sm font-light sm:text-base">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in
-          lacus nisi. Nam semper nisl id tellus molestie, in fringilla massa
-          aliquam. Nunc sodales leo justo, nec placerat metus molestie eu.
-          Vivamus et ante accumsan risus posuere ultrices non nec sapien.
-          Maecenas nec venenatis enim, nec lacinia neque. Etiam dictum feugiat
-          nulla, in eleifend metus laoreet ut. Curabitur id neque urna. Cras
-          bibendum malesuada leo, non auctor est. Donec lacinia enim at
-          fermentum lacinia. Etiam tincidunt nisi vel risus mattis, sit amet
-          tincidunt dolor sollicitudin. In hac habitasse platea dictumst. Etiam
-          placerat felis vel volutpat molestie. Integer laoreet arcu et sem
-          mollis tincidunt in eget velit. Nullam at magna nunc. Cras ultrices
-          neque ut metus iaculis aliquam. Cras vestibulum odio sed rhoncus
-          aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Proin in lacus nisi. Nam semper nisl id tellus molestie, in fringilla
-          massa aliquam. Nunc sodales leo justo, nec placerat metus molestie eu.
-          Vivamus et ante accumsan risus posuere ultrices non nec sapien.
-          Maecenas nec venenatis enim, nec lacinia neque. Etiam dictum feugiat
-          nulla, in eleifend metus laoreet ut. Curabitur id neque urna. Cras
-          bibendum malesuada leo, non auctor est. Donec lacinia enim at
-          fermentum lacinia. Etiam tincidunt nisi vel risus mattis, sit amet
-          tincidunt dolor sollicitudin. In hac habitasse platea dictumst. Etiam
-          placerat felis vel volutpat molestie. Integer laoreet arcu et sem
-          mollis tincidunt in eget velit. Nullam at magna nunc. Cras ultrices
-          neque ut metus iaculis aliquam. Cras vestibulum odio sed rhoncus
-          aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Proin in lacus nisi. Nam semper nisl id tellus molestie, in fringilla
-          massa aliquam. Nunc sodales leo justo, nec placerat metus molestie eu.
-          Vivamus et ante accumsan risus posuere ultrices non nec sapien.
-          Maecenas nec venenatis enim, nec lacinia neque. Etiam dictum feugiat
-          nulla, in eleifend metus laoreet ut. Curabitur id neque urna. Cras
-          bibendum malesuada leo, non auctor est. Donec lacinia enim at
-          fermentum lacinia. Etiam tincidunt nisi vel risus mattis, sit amet
-          tincidunt dolor sollicitudin. In hac habitasse platea dictumst. Etiam
-          placerat felis vel volutpat molestie. Integer laoreet arcu et sem
-          mollis tincidunt in eget velit. Nullam at magna nunc. Cras ultrices
-          neque ut metus iaculis aliquam. Cras vestibulum odio sed rhoncus
-          aliquet.
+        <h4 className="pt-3 text-sm font-bold sm:text-base">
+          편의성 개선 (2024-09-03)
+        </h4>
+        <p className="mt-1 text-sm sm:text-base">
+          1. 로그인 갱신 로직 수정: 로그인 페이지에서 올바른 정보를 입력했음에도
+          콘솔로 넘어가지 않는 문제 개선
         </p>
+        <p className="text-sm sm:text-base">
+          2. 출석체크 개선: 모바일 페이지에서 출석 체크시 참석이외에 다른 출석
+          종류(부분참석, 불참)를 선택할 시 출석체크 창이 닫히는 문제 개선
+        </p>
+        <p className="text-sm sm:text-base">3. 하위 패키지 및 보안 업데이트</p>
       </div>
     </Section>
   )

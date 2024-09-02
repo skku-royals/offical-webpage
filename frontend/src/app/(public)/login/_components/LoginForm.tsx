@@ -10,11 +10,12 @@ import {
   FormMessage
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
+import { auth } from '@/lib/auth/auth'
 import { LoginFormSchema } from '@/lib/forms'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { signIn } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { toast } from 'sonner'
 import type { z } from 'zod'
@@ -22,6 +23,19 @@ import type { z } from 'zod'
 export default function LoginForm() {
   const [isFetching, setIsFetching] = useState(false)
   const router = useRouter()
+
+  useEffect(() => {
+    const checkSession = async () => {
+      const session = await auth()
+
+      if (session) {
+        router.push('/console/dashboard')
+      }
+    }
+
+    checkSession()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const form = useForm<z.infer<typeof LoginFormSchema>>({
     resolver: zodResolver(LoginFormSchema),
@@ -34,6 +48,7 @@ export default function LoginForm() {
   const onSubmit = async (data: z.infer<typeof LoginFormSchema>) => {
     try {
       setIsFetching(true)
+
       const res = await signIn('credentials', {
         ...data,
         redirect: false
@@ -41,7 +56,8 @@ export default function LoginForm() {
 
       if (!res?.error) {
         router.refresh()
-        router.push('/')
+        router.push('/console/dashboard')
+        toast.success('로그인 성공')
       } else {
         toast.error('로그인 실패')
       }

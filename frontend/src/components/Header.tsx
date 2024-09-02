@@ -1,6 +1,6 @@
 'use client'
 
-import { auth } from '@/lib/auth'
+import { auth } from '@/lib/auth/auth'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
