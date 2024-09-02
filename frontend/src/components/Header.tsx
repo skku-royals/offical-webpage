@@ -69,7 +69,7 @@ export default function Header() {
           {navigation.map((item) => (
             <Link
               key={item.name}
-              href={item.href}
+              href="/"
               className="text-sm font-semibold leading-6 text-zinc-900 dark:text-gray-50"
               onClick={() => showNotImplemented()}
             >
@@ -124,7 +124,7 @@ export default function Header() {
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
-                    href={item.href}
+                    href="/"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-zinc-900 hover:bg-gray-400 hover:text-zinc-900/90 dark:text-gray-50"
                     onClick={() => {
                       setMobileMenuOpen(false)

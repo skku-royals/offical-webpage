@@ -41,13 +41,13 @@ export default function LoginForm() {
 
       if (!res?.error) {
         router.refresh()
-        router.push('/console/dashboard')
+        router.push('/')
       } else {
         toast.error('로그인 실패')
       }
     } catch (error) {
       console.log(error)
-      toast.error('로그인 실패')
+      toast.error('알 수 없는 오류 발생')
     } finally {
       setIsFetching(false)
     }

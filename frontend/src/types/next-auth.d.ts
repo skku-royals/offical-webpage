@@ -12,7 +12,6 @@ interface Token {
   refreshToken: string
   accessTokenExpires: number
   refreshTokenExpires: number
-  error?: string
 }
 
 declare module 'next-auth' {
@@ -20,7 +19,6 @@ declare module 'next-auth' {
   interface Session extends DefaultSession {
     user: UserData
     token: Token
-    error?: string
   }
 }
 

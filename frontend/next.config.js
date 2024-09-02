@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    typedRoutes: true,
+    instrumentationHook: true
+  },
   output: 'standalone',
   reactStrictMode: process.env !== 'production',
   env: {
