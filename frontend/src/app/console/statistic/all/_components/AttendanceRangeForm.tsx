@@ -126,7 +126,7 @@ export default function AttendanceRangeForm() {
                       mode="single"
                       selected={field.value}
                       onSelect={field.onChange}
-                      autoFocus
+                      initialFocus
                     />
                   </PopoverContent>
                 </Popover>
@@ -167,7 +167,7 @@ export default function AttendanceRangeForm() {
                       mode="single"
                       selected={field.value}
                       onSelect={field.onChange}
-                      autoFocus
+                      initialFocus
                     />
                   </PopoverContent>
                 </Popover>
