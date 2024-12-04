@@ -29,7 +29,7 @@
     "@pepperize/cdk-ses-smtp-credentials": "^0.3.795",
     "@prisma/client": "5.20.0",
     "argon2": "^0.41.1",
-    "cache-manager": "^5.7.6",
+    "cache-manager": "^6.3.0",
     "cache-manager-redis-yet": "^5.1.5",
     "cookie-parser": "^1.4.6",
     "express": "^4.21.0",
